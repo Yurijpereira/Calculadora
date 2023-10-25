@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Calculadora</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="calculadora">
+        <div class="estrutura">
+            <div class="container__display">
+                <input id="display" placeholder="0" disabled>
+            </div>
+
+            <div class="botoes">
+                <div class="container__botoes">
+                    <button type="button" onclick="deleta()" class="botao botoes--top">Del</button>
+                    <button id="igual" type="button" onclick="calcular()" class="botao botoes--top">=</button>
+                </div>
+                
+                <div class="container__botoes">
+                    <button type="button" value="7" onclick="recebeValor(this.value)" class="botao">7</button>
+                    <button type="button" value="8" onclick="recebeValor(this.value)" class="botao">8</button>
+                    <button type="button" value="9" onclick="recebeValor(this.value)" class="botao">9</button>
+                    <button type="button" value="+" onclick="recebeValor(this.value)" class="botao">+</button>
+                </div>
+                
+                <div class="container__botoes">
+                    <button type="button" value="4" onclick="recebeValor(this.value)" class="botao">4</button>
+                    <button type="button" value="5" onclick="recebeValor(this.value)" class="botao">5</button>
+                    <button type="button" value="6" onclick="recebeValor(this.value)" class="botao">6</button>
+                    <button type="button" value="-" onclick="recebeValor(this.value)" class="botao">-</button>
+                </div>
+                
+                <div class="container__botoes">
+                    <button type="button" value="1" onclick="recebeValor(this.value)" class="botao">1</button>
+                    <button type="button" value="2" onclick="recebeValor(this.value)" class="botao">2</button>
+                    <button type="button" value="3" onclick="recebeValor(this.value)" class="botao">3</button>
+                    <button type="button" value="/" onclick="recebeValor(this.value)" class="botao">/</button>
+                </div>
+                
+                <div class="container__botoes">
+                    <button id="limpa" type="button" onclick="reinicia()" class="botao">C</button>
+                    <button type="button" value="0" onclick="recebeValor(this.value)" class="botao">0</button>
+                    <button type="button" value="." onclick="recebeValor(this.value)" class="botao">.</button>
+                    <button type="button" value="*" onclick="recebeValor(this.value)" class="botao">x</button>
+                </div>                
+            </div>
+        </div>
+    </div>
+
+    <script src="js/main.js"></script>
+</body>
+</html>
