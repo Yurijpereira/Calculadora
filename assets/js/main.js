@@ -19,9 +19,11 @@ function tela(valor) {
     }
 
     // evita sinais duplicados em seguida
-    if (!ultimoCaractereSinal || !valorDigitadoSinal) {
-        display.value += valor
+    if (ultimoCaractereSinal && valorDigitadoSinal) {
+        return
     }
+    
+    display.value += valor
 }
 
 function deleta() {
@@ -41,5 +43,3 @@ function calcular() {
         display.value = resultado
     }
 }
-
-console.log()
