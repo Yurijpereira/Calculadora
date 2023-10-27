@@ -30,6 +30,7 @@ function tela(valor) {
         display.value = '0.'
     }
     
+    // evita iniciar com operadores sem números antes
     if (display.value === '/' || display.value === '*' || display.value === '+') {
         reinicia()
     }
@@ -38,11 +39,19 @@ function tela(valor) {
     if (ultimoCaractereSinal && valorDigitadoSinal) {
         return
     }
+
+    // limita a quantidade de caracteres no display
+    if (display.value.length === 12) {
+        return
+    }
     
     display.value += valor
-    if(valor === '.'){
+
+    // evita mais de um ponto no mesmo número
+    if (valor === '.'){
         removerPontoDuplicado()
     }
+
     verificaPonto(valor)
 }
 
