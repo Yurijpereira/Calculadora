@@ -73,7 +73,7 @@ function calcular() {
     // evita operações inválidas
     if(resultado === undefined){
         display.value = '0'
-    } else if (resultado === Infinity || isNaN(resultado)) {
+    } else if (resultado === Infinity || isNaN(resultado) || resultado === -Infinity) {
         alert("Operação matemática inválida")
         reinicia()
     } else {
