@@ -63,7 +63,12 @@ function deleta() {
 
 function calcular() {
     let resultado = eval(display.value)
-    ponto = true
+    
+    if(display.value.includes(".")) {
+        ponto = false
+    } else {
+        ponto = true
+    }
     
     // evita operações inválidas
     if(resultado === undefined){
