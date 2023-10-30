@@ -81,5 +81,4 @@ function verificaPontoAposCalculo() {
     } else {
         ponto = true;
     }
-    console.log(display.value)
 }
